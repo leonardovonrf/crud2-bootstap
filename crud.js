@@ -104,7 +104,7 @@ function calcularFrete() {
 
   if (peso <= 0.30) {
     valorFrete = 8.00;
-  } else if (peso <= 1.00 && largura < 50 || altura < 50 || profundidade < 50) {
+  } else if ((peso <= 1.00) && largura < 50 || altura < 50 || profundidade < 50) {
       valorFrete = 15.00;
   } else {
       valorFrete = 30.00;
