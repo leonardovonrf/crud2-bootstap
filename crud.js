@@ -93,3 +93,33 @@ const crud = (() => {
 
   return { showForm, edit, remove, download };
 })();
+
+function calcularFrete() {
+  const peso = parseFloat(document.getELementById('peso').value);
+  const altura = parseFloat(document.getELementById('altura').value);
+  const largura = parseFloat(document.getELementById('largura').value);
+  const profundidade = parseFloat(document.getELementById('profundidade').value);
+
+  let valorFrete =0;
+
+  if (peso <= 0.30) {
+    valorFrete = 8.00;
+  } else if (peso <= 1.00 && largura < 50 || altura < 50 || profundidade < 50) {
+      valorFrete = 15.00;
+  } else {
+      valorFrete = 30.00;
+alert('Frete: R${valorFrete.toFixed(2)};
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
