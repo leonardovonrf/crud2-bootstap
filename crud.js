@@ -8,6 +8,7 @@ const crud = (() => {
   const form = document.getElementById("crud-form");
   const container = document.getElementById("form-container");
   const templateContent = document.getElementById("form-template").content;
+  
 
   const render = () => {
     const list = document.getElementById("crud-list");
@@ -15,9 +16,11 @@ const crud = (() => {
 
     dados.forEach(item => {
       const tr = document.createElement("tr");
+      const frete = calcularFrete(item.peso, item.altura, item.largura, item.profundidade);
       tr.innerHTML = `
         <td>${item.id}</td>
         <td>${item[Object.keys(item)[1]]}</td>
+        <td>R$${frete}</td>
         <td>
           <button class="btn btn-sm btn-warning" onclick="crud.edit(${item.id})">Editar</button>
           <button class="btn btn-sm btn-danger" onclick="crud.remove(${item.id})">Excluir</button>
@@ -94,11 +97,7 @@ const crud = (() => {
   return { showForm, edit, remove, download };
 })();
 
-function calcularFrete() {
-  let peso = parseFloat(document.getElementById('peso').value);
-  let altura = parseFloat(document.getElementById('altura').value);
-  let largura = parseFloat(document.getElementById('largura').value);
-  let profundidade = parseFloat(document.getElementById('profundidade').value);
+function calcularFrete(peso, altura, largura, profundidade) {
 
   let valorFrete = 0;
 
@@ -109,7 +108,7 @@ function calcularFrete() {
   } else {
     valorFrete = 30.00;
   } 
-  alert(`Frete: R$${valorFrete.toFixed(2)}`)
+  return valorFrete.toFixed(2);
 }
 
 
