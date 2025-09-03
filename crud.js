@@ -95,10 +95,10 @@ const crud = (() => {
 })();
 
 function calcularFrete() {
-  let peso = parseFloat(document.getELementById('peso').value);
-  let altura = parseFloat(document.getELementById('altura').value);
-  let largura = parseFloat(document.getELementById('largura').value);
-  let profundidade = parseFloat(document.getELementById('profundidade').value);
+  let peso = parseFloat(document.getElementById('peso').value);
+  let altura = parseFloat(document.getElementById('altura').value);
+  let largura = parseFloat(document.getElementById('largura').value);
+  let profundidade = parseFloat(document.getElementById('profundidade').value);
   let valorFrete = 0;
 
   if (peso <= 0.30) {
