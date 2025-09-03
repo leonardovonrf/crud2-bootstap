@@ -99,7 +99,7 @@ function calcularFrete() {
   let altura = parseFloat(document.getElementById('altura').value);
   let largura = parseFloat(document.getElementById('largura').value);
   let profundidade = parseFloat(document.getElementById('profundidade').value);
-  
+
   let valorFrete = 0;
 
   if (peso <= 0.30) {
@@ -111,7 +111,6 @@ function calcularFrete() {
   } 
   alert(`Frete: R$${valorFrete.toFixed(2)}`)
 }
-
 
 
 
