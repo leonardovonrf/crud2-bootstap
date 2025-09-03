@@ -108,7 +108,7 @@ function calcularFrete() {
   } else {
     valorFrete = 30.00;
   } 
-  alert(`Frete: R${valorFrete.toFixed(2)}`)
+  alert(`Frete: R$${valorFrete.toFixed(2)}`)
 }
 
 
