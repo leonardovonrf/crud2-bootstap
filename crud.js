@@ -92,7 +92,6 @@ const crud = (() => {
   render();
 
   return { showForm, edit, remove, download };
-})();
 
 function calcularFrete() {
   let peso = parseFloat(document.getELementById('peso').value);
@@ -110,7 +109,7 @@ function calcularFrete() {
       valorFrete = 30.00;
 alert('Frete: R${valorFrete.toFixed(2)};
 
-
+})();
 
 
 
